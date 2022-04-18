@@ -67,7 +67,7 @@
                 <view>早餐: {{ item.info.size }}份</view>
                 <view>午餐A: {{ item.info.size1 }}份  午餐B:{{ item.info.size2 }}份  清真午餐：{{item.info.size3}}份</view>
                 <view>晚餐A: {{ item.info.size4 }}份  晚餐B:{{ item.info.size5 }}份  清真晚餐：{{item.info.size6}}份</view>
-                <view>订了{{ item.info.remark }}的饭</view>
+                <view>预定{{ item.info.remark }}的饭</view>
             </view>
             <view class="address">
                 {{ item.state === '待配送' ? '目的地：' + item.address : '配送已完成，相关信息已隐藏' }}
@@ -117,7 +117,7 @@
                 <view>早餐: {{ item.info.size }}份</view>
                 <view>午餐A: {{ item.info.size1 }}份  午餐B:{{ item.info.size2 }}份  清真午餐：{{item.info.size3}}份</view>
                 <view>晚餐A: {{ item.info.size4 }}份  晚餐B:{{ item.info.size5 }}份  清真晚餐：{{item.info.size6}}份</view>
-                <view>订了{{ item.info.remark }}的饭</view>
+                <view>预订{{ item.info.remark }}的饭</view>
             </view>
             <view class="address">
                 {{ item.state === '待配送' ? '目的地：' + item.address : '配送已完成，相关信息已隐藏' }}
