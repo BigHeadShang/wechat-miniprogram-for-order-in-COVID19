@@ -1,0 +1,40 @@
+<view class="body">
+    <view wx:for="{{ menuList }}">
+        <view class="subtitle">
+        早餐
+        </view>
+        <view>1️⃣  {{ item.name1 }}</view>
+        <view>2️⃣  {{ item.name2 }}</view>
+        <view>3️⃣  {{ item.name3 }}</view>
+        <view>4️⃣  {{ item.name4 }}</view>
+        <view class="subtitle">
+            午餐A + 米饭🍚 （15元套餐）
+        </view>
+        <view>1️⃣  {{ item.name5 }}</view>
+        <view>2️⃣  {{ item.name6 }}</view>
+        <view>3️⃣  {{ item.name7 }}</view>
+        <view>4️⃣  {{ item.name8 }}</view>
+        <view class="subtitle">
+            午餐B + 米饭🍚 （10元套餐）
+        </view>
+        <view>1️⃣  {{ item.name9 }}</view>
+        <view>2️⃣  {{ item.name10 }}</view>
+        <view>3️⃣  {{ item.name11 }}</view>
+        <!-- <view>4️⃣  {{ item.name12 }}</view> -->
+        <view class="subtitle">
+            晚餐A + 米饭🍚 （15元套餐）
+        </view>
+        <view>1️⃣  {{ item.name13 }}</view>
+        <view>2️⃣  {{ item.name14 }}</view>
+        <view>3️⃣  {{ item.name15 }}</view>
+        <view>4️⃣  {{ item.name16 }}</view>
+        <view class="subtitle">
+            晚餐B + 米饭🍚 （10元套餐）
+        </view>
+        <view>1️⃣  {{ item.name17 }}</view>
+        <view>2️⃣  {{ item.name18 }}</view>
+        <view>3️⃣  {{ item.name19 }}</view>
+        <!-- <view>4️⃣  {{ item.name20 }}</view> -->
+    </view>
+    <button class="btn" bindtap="backToorder">回到首页进行点餐💁‍♂️</button>
+</view>

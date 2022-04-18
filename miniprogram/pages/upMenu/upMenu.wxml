@@ -1,0 +1,41 @@
+<view>
+<view class="title">志愿者提交菜单通道</view>
+<view>
+<text class="subtitle">早餐</text>
+<input class='menu' value="{{ name1 }}" type="text" bindinput="getName1" />
+<input class='menu' value="{{ name2 }}" type="text" bindinput="getName2" />
+<input class='menu' value="{{ name3 }}" type="text" bindinput="getName3" />
+<input class='menu' value="{{ name4 }}" type="text" bindinput="getName4" />
+</view>
+<view>
+<text class="subtitle">午餐A</text>
+<input class='menu' value="{{ name5 }}" type="text" bindinput="getName1l15" />
+<input class='menu' value="{{ name6 }}" type="text" bindinput="getName2l15" />
+<input class='menu' value="{{ name7 }}" type="text" bindinput="getName3l15" />
+<input class='menu' value="{{ name8 }}" type="text" bindinput="getName4l15" />
+</view>
+<view>
+<text class="subtitle">午餐B</text>
+<input class='menu' value="{{ name9 }}" type="text" bindinput="getName1l10" />
+<input class='menu' value="{{ name10 }}" type="text" bindinput="getName2l10" />
+<input class='menu' value="{{ name11 }}" type="text" bindinput="getName3l10" />
+<input class='menu' value="{{ name12 }}" type="text" bindinput="getName4l10" />
+</view>
+<view>
+<text class="subtitle">晚餐A</text>
+<input class='menu' value="{{ name13 }}" type="text" bindinput="getName1d15" />
+<input class='menu' value="{{ name14 }}" type="text" bindinput="getName2d15" />
+<input class='menu' value="{{ name15 }}" type="text" bindinput="getName3d15" />
+<input class='menu' value="{{ name16 }}" type="text" bindinput="getName4d15" />
+</view>
+<view>
+<text class="subtitle">晚餐B</text>
+<input class='menu' value="{{ name17 }}" type="text" bindinput="getName1d10" />
+<input class='menu' value="{{ name18 }}" type="text" bindinput="getName2d10" />
+<input class='menu' value="{{ name19 }}" type="text" bindinput="getName3d10" />
+<input class='menu' value="{{ name20 }}" type="text" bindinput="getName4d10" />
+</view>
+
+<button class='btn' bindtap="submit">提交</button>
+
+</view>

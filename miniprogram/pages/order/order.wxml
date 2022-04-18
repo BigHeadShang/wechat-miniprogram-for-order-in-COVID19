@@ -1,0 +1,168 @@
+<scroll-view scroll-x class="scroll_view">
+    <view class="tab">
+        <view class="tab_item {{ tabNow === index ? 'select' : '' }}" wx:for="{{ tabList }}" data-id="{{ index }}" wx:key="index" bindtap="selectTab">
+            {{ item }}
+        </view>
+    </view>
+</scroll-view>
+
+<view wx:if="{{ tabNow === 0 }}" class="body">
+    <view class="tips">
+        向上拖动更新信息~~~
+    </view>
+    <view class="order" wx:for="{{ orderList }}" wx:key="index">
+        <view class="order_top">
+            <view class="top_left">
+                <image src="{{ item.userInfo.avatarUrl }}"></image>
+                <view class="name">
+                    <text>{{ item.name }}</text>
+                    <text>{{ item.time }}</text>
+                </view>
+            </view>
+            <view class="{{ item.stateColor }}">
+                {{ item.state }}
+            </view>
+        </view>
+        <view class="order_content">
+            <view class="content">
+                <view>早餐: {{ item.info.size }}份</view>
+                <view>午餐A: {{ item.info.size1 }}份  午餐B:{{ item.info.size2 }}份  清真午餐：{{item.info.size3}}份</view>
+                <view>晚餐A: {{ item.info.size4 }}份  晚餐B:{{ item.info.size5 }}份  清真晚餐：{{item.info.size6}}份</view>
+                <view>订了{{ item.info.remark }}的饭</view>
+            </view>
+            <view class="address">
+                {{ item.state === '待配送' ? '目的地：' + item.address : '配送已完成，相关信息已隐藏' }}
+            </view>
+        </view>
+        <view class="order_bottom">
+            <view class="money">
+                金额 ￥{{ item.money }}
+            </view>
+            <view class="accept" wx:if="{{ item.state === '待配送' }}" bindtap="orderReceive" data-item="{{ item }}">
+                志愿者统计
+            </view>
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{ tabNow === 1 }}" class="body">
+    <view class="tips">
+        向上拖动更新信息~~~
+    </view>
+    <view class="order" wx:for="{{ myOrder }}" wx:key="index">
+        <view class="order_top">
+            <view class="top_left">
+                <image src="{{ item.userInfo.avatarUrl }}"></image>
+                <view class="name">
+                    <text>{{ item.name }}</text>
+                    <text>{{ item.time }}</text>
+                </view>
+            </view>
+            <view class="{{ item.stateColor }}">
+                {{ item.state }}
+            </view>
+        </view>
+        <view class="order_content">
+            <view class="content">
+                <view>早餐: {{ item.info.size }}份</view>
+                <view>午餐A: {{ item.info.size1 }}份  午餐B:{{ item.info.size2 }}份  清真午餐：{{item.info.size3}}份</view>
+                <view>晚餐A: {{ item.info.size4 }}份  晚餐B:{{ item.info.size5 }}份  清真晚餐：{{item.info.size6}}份</view>
+                <view>订了{{ item.info.remark }}的饭</view>
+            </view>
+            <view class="address">
+                {{ item.state === '待配送' ? '目的地：' + item.address : '配送已完成，相关信息已隐藏' }}
+            </view>
+        </view>
+        <view class="order_bottom">
+        <button type="warn" size="mini" style="margin-right: 20rpx;" bindtap="deleteOrder" data-id="{{item._id}}">删除订单</button>
+            <view class="money">
+                金额 ￥{{ item.money }}
+            </view>
+            <view class="accept" wx:if="{{ item.state === '已上报' }}" bindtap="toFinish" data-item="{{ item }}">
+                已配送完成
+            </view>
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{ tabNow === 2 }}" class="body">
+    <view class="tips">
+        向上拖动更新信息~~~
+    </view>
+    <view class="helpOrderInfo">
+        <view class="orderNum">
+            <text>{{ helpTotalNum }}个宿舍</text>
+            <text>你已统计&配餐完成</text>
+        </view>
+        <view class="orderMoney">
+            <text>{{ helpTotalMoeny }}元</text>
+            <text>你已统计的宿舍总金额</text>
+        </view>
+    </view>
+    <view class="order" wx:for="{{ helpOrder }}" wx:key="index">
+        <view class="order_top">
+            <view class="top_left">
+                <image src="{{ item.userInfo.avatarUrl }}"></image>
+                <view class="name">
+                    <text>{{ item.name }}</text>
+                    <text>{{ item.time }}</text>
+                </view>
+            </view>
+            <view class="{{ item.stateColor }}">
+                {{ item.state }}
+            </view>
+        </view>
+        <view class="order_content">
+            <view class="content">
+                <view>早餐: {{ item.info.size }}份</view>
+                <view>午餐A: {{ item.info.size1 }}份  午餐B:{{ item.info.size2 }}份  清真午餐：{{item.info.size3}}份</view>
+                <view>晚餐A: {{ item.info.size4 }}份  晚餐B:{{ item.info.size5 }}份  清真晚餐：{{item.info.size6}}份</view>
+                <view>订了{{ item.info.remark }}的饭</view>
+            </view>
+            <view class="address">
+                {{ item.state === '待配送' ? '目的地：' + item.address : '配送已完成，相关信息已隐藏' }}
+            </view>
+        </view>
+        <view class="order_bottom">
+            <view class="money">
+                金额 ￥{{ item.money }}
+            </view>
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{ tabNow === 3 }}" class="body">
+    <view class="tips">
+        向上拖动更新信息~~~
+    </view>
+    <view class="order" wx:for="{{ rewardOrder }}" wx:key="index">
+        <view class="order_top">
+            <view class="top_left">
+                <image src="{{ item.userInfo.avatarUrl }}"></image>
+                <view class="name">
+                    <text>{{ item.name }}</text>
+                    <text>{{ item.time }}</text>
+                </view>
+            </view>
+            <view class="{{ item.stateColor }}">
+                {{ item.state }}
+            </view>
+        </view>
+        <view class="order_content">
+            <view class="content">
+                {{ item.info }}
+            </view>
+            <view class="address">
+                {{ item.state === '待配送' ? '目的地：' + item.address : '配送已完成，相关信息已隐藏' }}
+            </view>
+        </view>
+        <view class="order_bottom">
+            <view class="money">
+                金额 ￥{{ item.money }}
+            </view>
+            <view class="accept" wx:if="{{ item.state === '待配送' }}" bindtap="orderReceive" data-item="{{ item }}">
+                志愿者统计
+            </view>
+        </view>
+    </view>
+</view>

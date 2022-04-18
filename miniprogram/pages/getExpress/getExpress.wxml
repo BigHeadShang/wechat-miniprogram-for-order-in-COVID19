@@ -1,0 +1,59 @@
+<view class="container">
+    <view class="title">早餐</view>
+    <!-- <view class="type">
+        <view class="{{ typeNow === item.tips ? 'selectType' : ''}}" wx:for="{{ typeList }}" wx:key="tips"
+            data-id="{{ item.tips }}" data-tip="{{ item.tips }}" bindtap="selectType">{{ item.name }}</view>
+    </view> -->
+    <view class="type">
+        <view class="{{ typeNow === item.tips ? 'selectType' : ''}}" wx:for="{{ typeList }}" wx:key="tips"
+            data-id="{{ item.tips }}" data-tip="{{ item.tips }}" data-idx="{{ index }}" bindtap="selectType">{{ item.name }}</view>
+    </view>
+    <view class="title">午餐——A餐</view>
+    <view class="type">
+        <view class="{{ typeNowl15 === item.tips ? 'selectType1' : ''}}" wx:for="{{ typeListl15 }}" wx:key="tips"
+            data-id="{{ item.tips }}" data-tip="{{ item.tips }}" data-idx="{{ index }}" bindtap="selectType1">{{ item.name }}</view>
+    </view>
+    <view class="title">午餐——B餐</view>
+    <view class="type">
+        <view class="{{ typeNowl10 === item.tips ? 'selectType2' : ''}}" wx:for="{{ typeListl10 }}" wx:key="tips"
+            data-id="{{ item.tips }}" data-tip="{{ item.tips }}" data-idx="{{ index }}" bindtap="selectType2">{{ item.name }}</view>
+    </view>
+    <view class="title">午餐——清真餐</view>
+    <view class="type">
+        <view class="{{ typeNowlqqz === item.tips ? 'selectType3' : ''}}" wx:for="{{ typeListlqqz }}" wx:key="tips"
+            data-id="{{ item.tips }}" data-tip="{{ item.tips }}" data-idx="{{ index }}" bindtap="selectType3">{{ item.name }}</view>
+    </view>
+    <view class="title">晚餐——A餐</view>
+    <view class="type">
+        <view class="{{ typeNowd15=== item.tips ? 'selectType4' : ''}}" wx:for="{{ typeListd15 }}" wx:key="tips"
+            data-id="{{ item.tips }}" data-tip="{{ item.tips }}" data-idx="{{ index }}" bindtap="selectType4">{{ item.name }}</view>
+    </view>
+    <view class="title">晚餐——B餐</view>
+    <view class="type">
+        <view class="{{ typeNowd10 === item.tips ? 'selectType5' : ''}}" wx:for="{{ typeListd10 }}" wx:key="tips"
+            data-id="{{ item.tips }}" data-tip="{{ item.tips }}" data-idx="{{ index }}" bindtap="selectType5">{{ item.name }}</view>
+    </view>
+    <view class="title">晚餐——清真餐</view>
+    <view class="type">
+        <view class="{{ typeNowdqqz === item.tips ? 'selectType6' : ''}}" wx:for="{{ typeListdqqz }}" wx:key="tips"
+            data-id="{{ item.tips }}" data-tip="{{ item.tips }}" data-idx="{{ index }}" bindtap="selectType6">{{ item.name }}</view>
+    </view>
+    <view class="address">
+        <text>配送宿舍：</text>
+        <text bindtap="selectAddress">{{ address ? address : '请选择宿舍 >' }}</text>
+    </view>
+    <view class="address">
+        <text>填写订了几号的饭 🥺    🆘  必 填 🆘 </text>
+        <input type="text" placeholder="格式：4.15" value="{{remark}}" bindinput="getRemark"/>
+    </view>
+    <view class="bottom_tips">
+        <text>信息仅接单的志愿者可见, 请放心喔!</text>
+        <text>需支付</text>
+        <text>{{money+moneyl15+moneyd15+moneyl10+moneyd10+moneylqqz+moneydqqz}}元</text>
+    </view>
+    <button class="submit" bindtap="submit">完成订餐需求</button>
+    <!-- <view class="statement">
+        <text>免责声明</text>
+        <text>用户条款&隐私策略</text>
+    </view> -->
+</view>

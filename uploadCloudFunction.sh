@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e cloud1-1g5rpv5n6177b545 --n quickstartFunctions --r --project "/Users/shangzhanhao/Desktop/订餐小程序" --report_first --report

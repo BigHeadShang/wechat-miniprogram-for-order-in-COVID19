@@ -1,0 +1,75 @@
+<view class="info" bindtap="updateInfo">
+    <image class="avatar" src="{{ hasUserInfo ? userInfo.avatarUrl : '../../images/touxiang.png' }}"></image>
+    <block wx:if="{{ !hasUserInfo }}">
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"  wx:if="{{ canIUseGetUserProfile }}" bindtap="getUserProfile">点我授权</button>
+        <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">点我授权</button>
+    </block>
+    <view class="name" wx:if="{{ hasUserInfo }}">
+        <text>{{ userInfo.nickName }}</text>
+        <text>{{ userInfo.gender === 0 ? '男' : '女' }}</text>
+    </view>
+    <image wx:if="{{ hasUserInfo }}" class="into" src="../../images/jt.png"></image>
+</view>
+
+<button class="cell mt" bindtap="applyOrder">
+    <view class="cellLeft">
+        <image src="../../images/2.jpg"></image>
+        <text>申请成为宿舍楼志愿者</text>
+    </view>
+    <text class="cellRight">></text>
+</button>
+
+<button class="cell mt" bindtap="upMenu" wx:if="{{ admin }}">
+    <view class="cellLeft">
+        <image src="../../images/2.jpg"></image>
+        <text>菜单提交</text>
+    </view>
+    <text class="cellRight">></text>
+</button>
+
+<button class="cell mt" bindtap="orderReceiver" wx:if="{{ admin }}">
+    <view class="cellLeft">
+        <image src="../../images/2.jpg"></image>
+        <text>审核志愿者申请</text>
+    </view>
+    <text class="cellRight">></text>
+</button>
+<button class="cell mt" bindtap="excelReceiver" wx:if="{{ admin }}">
+    <view class="cellLeft">
+        <image src="../../images/2.jpg"></image>
+        <text>获取订餐数据</text>
+    </view>
+    <text class="cellRight">></text>
+</button>
+
+<view class="customerService mt">
+    <view class="tips">
+        问题请点击微信客服复制到微信添加好友说明
+    </view>
+    <button class="cell" bindtap="getWXCustomer">
+        <view class="cellLeft">
+            <image src="../../images/1.jpg"></image>
+            <text>微信客服</text>
+        </view>
+        <text class="cellRight">></text>
+    </button>
+</view>
+
+<view class="ohter mt">
+    <button class="cell" bindtap="toAbout">
+        <view class="cellLeft">
+            <image src="../../images/3.jpg"></image>
+            <text>关于志愿者</text>
+        </view>
+        <text class="cellRight">></text>
+    </button>
+    <button class="cell" open-type="contact">
+        <view class="cellLeft">
+            <image src="../../images/4.jpg"></image>
+            <text>任何吐槽点这里</text>
+        </view>
+        <text class="cellRight">></text>
+    </button>
+</view>
+
+<view class="version mt">当前版本: 0.1.0</view>

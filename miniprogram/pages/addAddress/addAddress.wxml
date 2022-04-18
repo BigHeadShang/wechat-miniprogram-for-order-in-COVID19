@@ -1,0 +1,45 @@
+<view class="body">
+    <view class="body_item">
+        <view class="left">
+            <image src="../../images/1.jpg"></image>
+            <text>选择楼栋</text>
+        </view>
+        <view class="right" bindtap="selectBuild">{{ build ? build : '点击选择' }} ></view>
+    </view>
+    <view class="body_item">
+        <view class="left">
+            <image src="../../images/2.jpg"></image>
+            <text>宿舍号</text>
+        </view>
+        <view class="right">
+            <input type="text" placeholder="输入宿舍号" bindinput="getHouseNumber" value="{{ houseNumber }}" />
+        </view>
+    </view>
+    <view class="body_item">
+        <view class="left">
+            <image src="../../images/3.jpg"></image>
+            <text>订餐人</text>
+        </view>
+        <view class="right">
+            <input type="text" placeholder="订餐人" bindinput="getName" value="{{ name }}" />
+        </view>
+    </view>
+    <!-- <view class="body_item">
+        <view class="left">
+            <image src="../../images/4.jpg"></image>
+            <text>配送联系方式</text>
+        </view>
+        <view class="right">
+            <input type="text" placeholder="配送联系方式" bindinput="getPhone" value="{{ phone }}" />
+        </view>
+    </view> -->
+
+    <view class="defalut">
+        <text>是否设为送餐宿舍</text>
+        <switch checked="{{ defalutAddress }}" bindchange="handleChangeSwitch"></switch>
+    </view>
+
+    <button class="saveBtn" bindtap="saveAddress">保存宿舍</button>
+
+    <!-- <text class="showTip">地址说明</text> -->
+</view>

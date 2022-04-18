@@ -1,0 +1,22 @@
+<view class="logo">
+    <image src="../../images/1.jpeg" mode="widthFix"></image>
+</view>
+
+<view class="desc">
+    旨在帮助30号楼的志愿者们进行更好地统筹
+</view>
+
+<view class="text">联系大头</view>
+
+<view class="cell">
+    对本程序中的疏漏之处和错误, 望不吝赐教
+</view>
+
+<view class="cell">
+    我的github（其实没什么东西）：https://github.com/BigHeadShang
+</view>
+
+<view class="cell">
+    第一次做全栈的小程序开发🥺有什么bug一定要及时联系我进行修改哦！（联系了也有可能改不出来
+    但是大头非常喜欢交朋友！喜欢和大家交朋友！剧本杀等项目一定要叫我！
+</view>

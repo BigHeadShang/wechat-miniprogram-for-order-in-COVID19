@@ -1,0 +1,6 @@
+<view class="body">
+    <image src="../../images/3.jpg"></image>
+    <text>审核中，请喝杯奶茶等会</text>
+    <text>没通过那再去喝杯奶茶</text>
+    <button class="btn" bindtap="getAdminWX">微信催一催大头</button>
+</view>

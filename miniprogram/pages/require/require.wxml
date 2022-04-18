@@ -1,0 +1,21 @@
+<view class="body">
+    <view class="avatar">
+        <image src="{{ userInfo.avatarUrl }}"></image>
+    </view>
+    <view class="item">
+        <text>吐槽：</text>
+        <input type="text" placeholder="不限字数" value="{{ userask }}" bindinput="getUserASK"/>
+    </view>
+    <view class="uploadImg">
+        <text>想吐槽的东西的照片（选填）：</text>
+        <view class="upload" bindtap="uploadImg">
+            <text wx:if="{{ !userIDImg }}"> + </text>
+            <image wx:else src="{{ userIDImg }}"></image>
+        </view>
+    </view>
+    <view class="tips mt" bindtap="getAdminWX">
+        点击复制志愿者微信进行反映
+    </view>
+    <my-button text="吐槽好了！" bindtap="submit"></my-button>
+    <my-modal wx:if="{{ showTips }}" title="常见问题" content="{{ modalContent }}" bindcancel="showTips" bindsubmit="showTips"></my-modal>
+</view>

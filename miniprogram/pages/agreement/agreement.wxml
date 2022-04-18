@@ -1,0 +1,13 @@
+<view class="body">
+    <text class="title">关于订餐的一些须知</text>
+    <view>
+        为了保证每天餐饮的足量配送
+        请各位舍长务必在各楼层负责人规定时间之前按时进行订餐需求下单！
+        第二天的饭的发放将凭此下单记录and时间进行发放
+        若下单时间超过最晚限定时间
+        则后果全将由个人承担
+        谢谢大家配合！
+    </view>
+    <button class="btn" bindtap="agreeSave">我记住了，并保证按时下单</button>
+    <button class="btn" bindtap="backToIndex">返回首页</button>
+</view>
