@@ -6,6 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        name:'',
         name1: '',
         name2: '',
         name3: '',
@@ -27,7 +28,11 @@ Page({
         name19: '',
         name20: '',
     },
-
+    getName(e) {
+        this.setData({
+            name: e.detail.value,
+        })
+    },
     getName1(e) {
         this.setData({
             name1: e.detail.value,
@@ -159,6 +164,7 @@ Page({
         // 提交数据到数据库
         db.collection("menu").add({
             data: {
+                name: this.data.name,
                 name1: this.data.name1,
                 name2: this.data.name2,
                 name3: this.data.name3,

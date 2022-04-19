@@ -1,6 +1,7 @@
 <view class="body">
     <view wx:for="{{ menuList }}">
         <view class="subtitle">
+        <view>Date : {{item.name}}</view>
         早餐
         </view>
         <view>1️⃣  {{ item.name1 }}</view>

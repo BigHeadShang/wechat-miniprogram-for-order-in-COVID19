@@ -1,6 +1,9 @@
 <view>
 <view class="title">志愿者提交菜单通道</view>
+<text class="subtitle">日期</text>
+<input class='menu' value="{{ name }}" type="text" bindinput="getName" />
 <view>
+
 <text class="subtitle">早餐</text>
 <input class='menu' value="{{ name1 }}" type="text" bindinput="getName1" />
 <input class='menu' value="{{ name2 }}" type="text" bindinput="getName2" />
